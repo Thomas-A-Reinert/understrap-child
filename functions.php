@@ -3,16 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$understrap_extended_child_includes = array(
-	'/tgm-plugin-settings.php',            // TGM Plugin installer settings.
-	'/kirki-wrapper.php',                  // Wrapper for Kirki customizer. Allows fallback when Kirki is not installed or deactivated.
-	'/kirki-settings.php',                 // Settings for Kirki Customizer.
-);
-
-foreach ( $understrap_extended_child_includes as $file ) {
-	require_once get_stylesheet_directory() . '/inc' . $file;
-}
-
 function understrap_remove_scripts() {
     wp_dequeue_style( 'understrap-styles' );
     wp_deregister_style( 'understrap-styles' );
@@ -38,6 +28,6 @@ function theme_enqueue_styles() {
 }
 
 function add_child_theme_textdomain() {
-    load_child_theme_textdomain( 'understrap-extended-child', get_stylesheet_directory() . '/languages' );
+    load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
