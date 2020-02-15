@@ -1,4 +1,4 @@
-# understrap-child
+# understrap-extended-child
 Basic Child Theme for UnderStrap Theme Framework: https://github.com/understrap/understrap
 
 ## How it works
@@ -11,14 +11,13 @@ Understrap Child Theme uses the Enqueue method to load and sort the CSS file the
 ## Installation
 1. Install the parent theme UnderStrap first: `https://github.com/understrap/understrap`
    - IMPORTANT: If you download UnderStrap from GitHub make sure you rename the "understrap-master.zip" file to "understrap.zip" or you might have problems using this child theme!
-1. Upload the understrap-child folder to your wp-content/themes directory
+1. Upload the understrap-extended-child folder to your wp-content/themes directory
 1. Go into your WP admin backend 
 1. Go to "Appearance -> Themes"
 1. Activate the UnderStrap Child theme
 
 ## Editing
 Add your own CSS styles to `/sass/theme/_child_theme.scss`
-or import you own files into `/sass/theme/understrap-child.scss`
 
 To overwrite Bootstrap's or UnderStrap's base variables just add your own value to:
 `/sass/theme/_child_theme_variables.scss`
@@ -28,7 +27,7 @@ For example, the "$brand-primary" variable is used by both Bootstrap and UnderSt
 Add your own color like: `$brand-primary: #ff6600;` in `/sass/theme/_child_theme_variables.scss` to overwrite it. This change will automatically apply to all elements that use the $brand-primary variable.
 
 It will be outputted into:
-`/css/understrap-child.min.css` and `/css/understrap-child.css`
+`/css/understrap-extended-child.min.css` and `/css/understrap-extended-child.css`
 
 So you have one clean CSS file at the end and just one request.
 
